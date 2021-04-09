@@ -26,10 +26,11 @@ async (req,res)=>{
             user:req.user.id
         }); 
         const post=await newPost.save();
+
         res.send(post);
         } catch (error) {
         console.error(error.message);
-        res.status(500).send('Server Error');
+        res.status(500).send('Server Errors');
     }
 });
 
